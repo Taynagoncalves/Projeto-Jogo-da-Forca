@@ -1,0 +1,341 @@
+#tela-inicial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #221404, #221404);
+  z-index: 1000; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+#tela-inicial > * {
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+#botao-jogar {
+  position: absolute;
+  left: 45%;
+  padding: 20px 60px;
+  color: #020000;
+  background-color: #e4ce0a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#botao-jogar:hover {
+  background-color: #2df006;
+  transform: scale(1.05);
+
+}
+
+ .game-message {
+  position: absolute;
+  top: 28%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+
+
+* {
+    margin: 10;
+    padding: 5px;
+    box-sizing: border-box;
+  
+  }
+
+  #letter-input{
+    font-size: 25px;
+  }
+
+
+  body {
+    background-image: url(fundo.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    border: 2px solid #000000e0;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 800px;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+
+
+  }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+
+
+    #hint-button {
+    position: absolute;
+    top: -1%;
+    left: 100%;
+    padding: 15px 15px;
+    font-size: 1rem;
+    background-color: #f1da08;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-style:dotted;
+
+
+ }
+
+    #hint-button:hover {
+    background-color: #ebfa1b;
+}
+
+    #hint-display {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #e40707;
+}
+
+
+  .palavra {
+    margin: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  button { /*JOGAR TELA INICIAl*/
+    position: absolute;
+    top: 82%;
+    left: 60%;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color:rgb(76, 201, 13);
+    font-size: 1em;
+  }
+
+
+   #guess-button{
+    position: absolute;
+    top: 79%;
+    left: 55%;
+    width: 70px;
+    height: 50px;
+    font-size: 80%;
+    background-color: #07ee4086;
+    border-radius: 5px;
+   }
+
+   #guess-button:hover{
+    background-color:#0dd438;
+
+   }
+
+
+  #restart-button {
+    position: absolute;
+    top: 86%;
+    left: 40%;
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #07ee4086;
+    color: rgb(8, 8, 8);
+    transition: background-color 0.3s ease;
+    border: 2px solid #000000;
+    border-radius: 5px;
+  }
+  
+  #restart-button:hover {
+    background-color: #07f33a;
+  }
+  
+
+   #sair-button {
+    position: absolute;
+    top: 92%;
+    left: 46%;
+    width: 100px;
+    padding: 10px 20px;
+    background-color: #fd0505;
+    cursor: pointer;
+    border-radius: 8px;
+}
+   #sair-button:hover {
+    background-color: rgb(255, 251, 0);
+   }
+
+  #word-display {
+    font-size: 30x;
+    margin-bottom: 20px;
+    color: #1b1717;
+    font-weight: bold;
+
+  }
+  
+
+  #wrong-guesses {
+    font-size: 20px;
+    color: #f50707;
+    text-align: center;
+  }
+  
+  #remaining-chances {
+    font-weight: bold;
+    color: #fd0505;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+  }
+  
+  input {
+    position: absolute;
+    top: 80%;
+    left: 43%;
+    width: 80px;
+    height: 50px;
+    border-radius: 12px;
+    border: 4px solid #0dd438;
+
+  }
+
+  
+  #hangman-container {
+    position: relative;
+    width: 600px;  
+    height: 400px;
+  }
+
+
+  
+  /* PARTES DO BONECO */
+  #forca img {
+    position: absolute;
+    top: 5%;
+    left: 185px;
+    width: 170px;
+    height: 240px;
+
+  }
+
+  #chao img {
+    position: absolute;
+    top: 28%;
+    left: 150px;
+    width: 500px;
+    height: 300px;
+  }
+  
+  #cabeca {
+    top: 2%;
+    left: 200px;
+    width: 150px;
+    border-radius: 100%;
+    position: absolute;
+
+  }
+  
+  #pescoco {
+    top: 1%;
+    left: 180px;
+    width: 200px;
+    position: absolute;
+
+  }
+  
+  #corpo {
+    top: 15%;
+    left: 180px;
+    width: 200px;
+    position: absolute;
+  
+  }
+  
+  #braco-direito {
+    top: 14%;
+    left: 180px;
+    width: 200px;
+    position: absolute;
+    
+
+  }
+  
+  #braco-esquerdo {
+    top: 20%;
+    left: 210px;
+    width: 200px;
+    position: absolute;
+  }
+
+  
+  #perna-esquerda {
+    top: 25%;
+    left: 190px;
+    width: 200px;
+    position: absolute;
+   
+  }
+
+  #perna-direita {
+    top: 31%;
+    left: 185px;
+    width: 180px;
+    position: absolute;
+ 
+  }
+  
+  #perdeu {
+    top: 7%;
+    left: 180px;
+    width: 200px;
+    position: absolute;
+
+
+  }
+  
+
+  
+  
